@@ -1,0 +1,118 @@
+/* global rules */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-size: $family;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    transition: all .3s linear;
+}
+p {
+    color: $grey-t;
+    font-weight: 300;
+    font-size: 16px;
+}
+section {
+    padding: 60px 0;
+}
+input {
+    background: none;
+    border: none;
+    outline: none;
+    transition: .3s linear;
+}
+.container {
+    @media (min-width: 1200px) {
+        margin-left: 120px !important;
+        margin-right: 120px !important;
+    }
+    @media (min-width: 922px) and (max-width: 1199px) {
+        margin-left: 90px !important;
+        margin-right: 90px !important;
+    }
+    @media (min-width: 768px) and (max-width: 921px) {
+        margin-left: 60px !important;
+        margin-right: 60px !important;
+    }
+    margin-left: 30px;
+    margin-right: 30px;
+}
+.head-section {
+    h2 {
+        @media (min-width: 768px) {
+            font-size: 60px !important;
+        }
+        font-size: 40px;
+        font-weight: 800;
+        color: $black-t;
+        text-align: center;
+        margin-bottom: 40px;
+        &::first-letter {
+            text-transform: capitalize;
+        }
+        .red {
+            display: inline-block;
+            margin: 0 20px;
+            color: $red-bg;
+            font-weight: 600;
+            font-family: "Satisfy", cursive;
+            position: relative;
+            span {
+                position: relative;
+            }
+            &::before {
+                width: calc(100% + 20px);
+                height: 25px;
+                content: "";
+                background-color: $orange-bg;
+                position: absolute; 
+                bottom: 7px;
+                left: -10px;
+
+            }
+        }
+    }
+}
+.c-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btw-flex {
+    display: flex;
+    justify-content: space-between;
+}
+.align-c {
+    display: flex;
+    align-items: center;
+}
+.align-start {
+    display: flex;
+    align-items: flex-start;
+}
+.flex-1 {
+    flex: 1;
+}
+.flex-2 {
+    flex: 2;
+}
+.radius-50 {
+    border-radius: 50%;
+}
+.radius-30 {
+    border-radius: 30px;
+}
+.max-width {
+    max-width: 100%;
+}
+/* global rules */

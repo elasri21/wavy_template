@@ -1,0 +1,191 @@
+/* start header */
+header {
+    background-color: $main-bg;
+    min-height: 100vh;
+    .container {
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 10px 30px;
+            background-color: $main-bg;
+            z-index: 1111;
+            @media (min-width: 922px) {
+                .navigation {
+                    display: block !important;
+                    ul {
+                        align-items: center;
+                    }
+                }
+                .menu {
+                    display: none;
+                }
+            }
+            @media (max-width: 921px) {
+                .navigation {
+                    padding: 30px 20px;
+                    background-color: $white-c;
+                    position: fixed;
+                    top: 0;
+                    right: -100%;
+                    bottom: 0;
+                    left: 100%;
+                    transition: .4s linear;
+                    ul {
+                        flex-direction: column;
+                        li {
+                            a {
+                                &:hover {
+                                    color: $btn-bg;
+                                    &::before {
+                                        background-color: $btn-bg;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &.show {
+                        //display: block;
+                        right: 0;
+                        left: 40%;
+                        .close {
+                            display: flex !important;
+                        }
+                    }
+                }
+            }
+            @media (max-width: 500px) {
+                .navigation {
+                    &.show {
+                        left: 10%;
+                    }
+                }
+            }
+            .navigation {
+                ul {
+                    display: flex;
+                    gap: 20px;
+                    li {
+                        a {
+                            font-size: 16px;
+                            font-weight: 700;
+                            color: $black-t;
+                            text-transform: capitalize;
+                            position: relative;
+                            &::before {
+                                content: "";
+                                width: 0;
+                                height: 2px;
+                                background-color: $black-t;
+                                position: absolute;
+                                left: 0;
+                                top: 100%;
+                                transition: .3s linear;
+                            }
+                            &:hover {
+                                &::before {
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+                .close {
+                    display: none;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-bottom: 30px;
+                    span {
+                        font-size: 22px;
+                        text-transform: capitalize;
+                        color: $black-t;
+                        font-weight: 700;
+                    }
+                    i{
+                        font-size: 20px;
+                        color: $grey-t;
+                        cursor: pointer;
+                        transition: .3s linear;
+                        &:hover {
+                            color: $btn-bg;
+                        }
+                    }
+                }
+            }
+            .menu {
+                cursor: pointer;
+                i {
+                    font-size: 20px;
+                    color: $grey-t;
+                }
+            }
+        } 
+        .intro {
+            gap: 30px;
+            flex-wrap: wrap;
+            & > div {
+                @media (min-width: 922px) {
+                    width: calc(50% - 15px) !important;
+                }
+                width: 100%;
+                h1 {
+                    font-size: 50px;
+                    font-weight: 800;
+                }
+                h2 {
+                    font-size: 28px;
+                    font-weight: 700;
+                }
+                h1, h2 {
+                    color: $black-t;
+                    margin-bottom: 20px;
+                    &::first-letter {
+                        text-transform: capitalize;
+                    }
+                }
+                .buttons {
+                    gap: 20px;
+                    flex-wrap: wrap;
+                    .btn {
+                        display: block;
+                        border: 1px solid $btn-bg;
+                        font-weight: 600;
+                        font-size: 20px;
+                        &.free-consoltation {
+                            background-color: $btn-bg;
+                            color: $white-c;
+                            &:hover {
+                                background-color: $white-c;
+                                color: $btn-bg;
+                            }
+                        }
+                        &.buy-credits {
+                            color: $btn-bg;
+                            background-color: $main-bg;
+                            &:hover {
+                                background-color: $btn-bg;
+                                color: $white-c;
+                            }
+                        }
+                    }
+                }
+                &.illus {
+                    position: relative;
+                    overflow: hidden;
+                    &::after {
+                        content: "";
+                        width: 120%;
+                        height: 50%;
+                        background-color: $main-bg;
+                        position: absolute;
+                        left: 0;
+                        bottom: -30%;
+                        transform: rotate(-15deg);
+                    }
+                }
+            }
+        }
+    }
+}
+/* end header */

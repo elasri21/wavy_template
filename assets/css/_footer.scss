@@ -1,0 +1,177 @@
+footer {
+    background-color: $footer-bg;
+    section {
+        &.top-section {
+            border-bottom: 1px solid $border-c;
+            .container {
+                .useful-links {
+                    gap: 30px;
+                    display: flex;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                    align-items: flex-start;
+                    h3 {
+                        font-size: 30px;
+                        font-weight: 700;
+                        color: $black-t;
+                        text-transform: capitalize;
+                        margin-bottom: 20px;
+                    }
+                    p {
+                        font-size: 16px;
+                        font-weight: 300;
+                        color: $black-t;
+                        margin-bottom: 20px;
+                    }
+                    ul {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 20px;
+                    }
+                    a {
+                        font-size: 16px;
+                        font-weight: 300;
+                        text-transform: capitalize;
+                        color: $grey-t;
+                        display: block;
+                        &:hover {
+                            color: gray;
+                        }
+                    }
+                    .form-container {
+                        @media (max-width: 767px) {
+                            width: 100%;
+                            flex: 1 !important;
+                        }
+                        form {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 20px;
+                            .form-control {
+                                width: 100%;
+                                overflow: hidden;
+                                &.field {
+                                    border: 1px solid $border-c;
+                                    border-radius: 10px;
+                                    overflow: visible;
+                                    .icon {
+                                        padding: 10px;
+                                        width: fit-content;
+                                        i {
+                                            color: $black-t;
+                                        }
+                                    }
+                                    .email {
+                                        display: block;
+                                        flex: 1;
+                                        font-size: 16px;
+                                        font-weight: 300;
+                                        color: $black-t;
+                                        border-left: 1px solid $border-c;
+                                        padding: 10px 20px;
+                                        border-radius: 0 10px 10px 0;
+                                        caret-color: $btn-bg;
+                                        &::placeholder {
+                                            text-transform: capitalize;
+                                            transition: opacity .3s linear;
+                                            opacity: .8;
+                                        }
+                                        &:focus {
+                                            box-shadow: 0px 5px 0 -3px #ccc,
+                                            0px -5px 0 -3px #ccc,
+                                            3px 0 0 #ccc;
+                                            border-color: $btn-bg;
+                                            &::placeholder {
+                                                opacity: 0;
+                                            }
+                                        }
+                                    }
+                                }
+                                .submit {
+                                    display: block;
+                                    width: 100%;
+                                    font-size: 18px;
+                                    font-weight: 500;
+                                    color: $white-c;
+                                    text-transform: capitalize;
+                                    letter-spacing: .5s;
+                                    padding: 10px 20px;
+                                    background-color: $btn-bg;
+                                    border: 1px solid $btn-bg;
+                                    border-radius: 10px;
+                                    cursor: pointer;
+                                    &:hover {
+                                        background-color: rgba($btn-bg, .8);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.copy-right-section {
+            .container {
+                flex-wrap: wrap;
+                gap: 20px;
+                .copy-right {
+                    p {
+                        font-size: 16px;
+                        font-weight: 300;
+                        color: $black-t;
+                        text-transform: capitalize;
+                        &:first-of-type {
+                            margin-bottom: 10px;
+                        }
+                        a {
+                            color: $grey-t;
+                            span {
+                                text-transform: lowercase;
+                            }
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+                .social-media {
+                    gap: 15px;
+                    a {
+                        i {
+                            font-size: 26px;
+                            color: $black-t;
+                            transition: .3s linear;
+                        }
+                        &:hover {
+                            i {
+                                color: $btn-bg
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .up {
+        display: none;
+        width: 40px;
+        height: 40px;
+        border-radius: 6px;
+        border: 1px solid $btn-bg;
+        background-color: $btn-bg;
+        position: fixed;
+        right: 30px;
+        bottom: 30px;
+        i {
+            font-size: 20px;
+            color: $white-c;
+            transition: font-size .3s linear;
+        }
+        &:hover {
+            transform: scale(1.2);
+            i {
+                font-size: 23px;
+            }
+        }
+    }
+}
